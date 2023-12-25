@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Taxi System | Advanced GUI</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="#default" class="logo">Taxi System</a>
+        <div class="header-right">
+            <a href="index.html">Home</a>
+            <a href="booking.html" class="active">Booking</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <form id="bookingForm" action="#">
+        <div class="booking-container">
+            <h1 class="booking-title">Booking System</h1>
+            <input type="text" placeholder="Full Name" name="name" required>
+            <input type="text" placeholder="Travel from" name="travel from" required>
+            <input type="text" placeholder="Travel to" name="travel to" required>
+            <input type="date" placeholder="Date" name="date" required>
+            <input type="time" placeholder="Time" name="time" required>
+            <input type="text" placeholder="Email" name="email" required>
+            <input type="text" placeholder="Phone" name="phone" required>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+            <input type="submit" value="Submit" id="submitButton">
+            <button class="decline" type="button">Decline Order(s)</button>
+        </div>
+    </form>
+
+    <section class="booking-confirmation-popup" id="confirmationPopup">
+        <span class="overlay"></span>
+      
+        <div class="booking-confirmation-content">
+            <i class="fa-regular fa-circle-check"></i>
+            <h2>Your booking has been successfully submitted</h2>
+            <h3>We will contact you as soon as possible, with your booking confirmation.</h3>
+            <div class="buttons">
+                <button class="close-btn">Close</button>
+                <button class="decline-order">Decline Order <span id="countdownTimer" style="display: none">(5)</span></button>
+            </div>
+        </div>
+    </section>
+
+    <div class="feedback-wrapper">
+        <h3>We want to know why you choosed to left your order.</h3>
+        <form action="#">
+            <div class="rating">
+                <input type="number" name="rating" hidden>
+                <i class='bx bx-star star' style="--i: 0;"></i>
+                <i class='bx bx-star star' style="--i: 1;"></i>
+                <i class='bx bx-star star' style="--i: 2;"></i>
+                <i class='bx bx-star star' style="--i: 3;"></i>
+                <i class='bx bx-star star' style="--i: 4;"></i>
+            </div>
+            <textarea name="opinion" cols="30" rows="5" placeholder="Write your opinion"></textarea>
+            <div class="btn-group">
+                <button type="submit" class="btn submit">Submit</button>
+                <button class="btn cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
